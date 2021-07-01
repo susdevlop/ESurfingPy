@@ -28,7 +28,7 @@ def login():
                 "Account": Account,
                 "Password": Password,
                 "Signature": Signature,
-                "Pytesseract": Tesseract
+                "Tesseract": Tesseract
             }
             confile.write(json.dumps(Data, indent=4))
 
@@ -38,5 +38,3 @@ def logout():
     result = ESurfing.logout(ESurfingURL, Wlanacip, Wlanuserip, Account, Signature)
     if not result[0]:
         input(result[1])
-
-# login()
