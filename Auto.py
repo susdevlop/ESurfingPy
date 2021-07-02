@@ -118,14 +118,14 @@ def interval_mode():
     timecal = 0
     while True:
         prints("即将于 {}s 后重新登录".format(intervaltime - timecal))
+        time.sleep(1)
         if intervaltime - timecal == 0:
-            printst()
+            prints("正在重新登陆\n")
             main.logout()
             main.login()
             timecal = 0
         else:
             timecal += 1
-        time.sleep(1)
 
 
 def manual_mode():
